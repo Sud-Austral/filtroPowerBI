@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main role="main" id="Principal" style="margin-top:10%;">
+    <form action="" style="display:none">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="password" id="pass" name="pass" value="123"><br><br>
+        <input type="submit" value="Submit" onclick="validador(document.getElementById('pass').value);">
+    </form>
+    <button type="button" onclick="mostrarFiltrado('1');" class="btn btn-primary">Filtro 1</button>
+    <button type="button" onclick="mostrarFiltrado('dos');" class="btn btn-primary">Filtro 2</button>
+    <button type="button" onclick="mostrarFiltrado('3');" class="btn btn-primary">Filtro 3</button>
+    <button type="button" onclick="mostrarFiltrado('cuatro');" class="btn btn-primary">Filtro 4</button>
+</main>
+
+
+
+
+<div class="row" style="margin-top:2%;">
+    <div class="col">
+        <div id="iframe" style="width:100%;height:300%;"></div>
+    </div>
+
+</div>
+
+<script src="~/Scripts/PowerBI.js"></script>
