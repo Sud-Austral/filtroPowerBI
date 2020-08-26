@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacionBlanco.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,21 @@ namespace AplicacionBlanco.Controllers
     {
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public ActionResult Filtro_PowerBi(string fname, string pass)
+        {
+            Db_usuarios db_usuarios = new Db_usuarios();
+            foreach (var item in db_usuarios.Lista){
+                if(fname == item.nombre && pass == item.pass)
+                {
+                    ViewBag.level = item.level;
+                    ViewBag.nombre = item.nombre;
+                }
+            }
+            
+            
             return View();
         }
 
